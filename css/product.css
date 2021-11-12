@@ -1,0 +1,433 @@
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+section {
+    display: block
+}
+
+a {
+    background-color: transparent
+}
+
+a:active, a:hover {
+    outline: 0
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+img {
+    border: 0
+}
+
+button, input {
+    color: inherit;
+    font: inherit;
+    margin: 0
+}
+
+button {
+    overflow: visible
+}
+
+button {
+    text-transform: none
+}
+
+button {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+input {
+    line-height: normal
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+td {
+    padding: 0
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #757575
+}
+
+button, input {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none
+}
+
+a:focus, a:hover {
+    color: #23527c;
+    text-decoration: underline
+}
+
+a:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px
+}
+
+img {
+    vertical-align: middle
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 4% 1% 10%;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px
+    }
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px
+}
+
+.col-lg-9, .col-md-12, .col-md-6 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+@media (min-width: 992px) {
+    .col-md-12, .col-md-6 {
+        float: left
+    }
+
+    .col-md-12 {
+        width: 100%
+    }
+
+    .col-md-6 {
+        width: 50%
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-9 {
+        float: left
+    }
+
+    .col-lg-9 {
+        width: 75%
+    }
+}
+
+.clearfix:after, .clearfix:before, .container:after, .container:before, .row:after, .row:before {
+    content: " ";
+    display: table
+}
+
+.clearfix:after, .container:after, .row:after {
+    clear: both
+}
+
+@font-face {
+    font-family: FontAwesome;
+    src: url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0);
+    src: url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format('embedded-opentype'), url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0) format('woff2'), url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0) format('woff'), url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0) format('truetype'), url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+img {
+    max-width: 100%
+}
+
+h1, h3 {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+h1 {
+    font-size: 22px;
+    color: #FFFFFF;
+    font-family: "Comic Sans MS", cursive;
+    text-align: center;
+}
+
+h3 {
+    font-size: 18px
+}
+
+a {
+    color: #23a1d1;
+    text-decoration: none
+}
+
+a:focus, a:hover {
+    text-decoration: none
+}
+
+.m-tb-10 {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.p-tb-15 {
+    padding-top: 15px;
+    padding-bottom: 15px
+}
+
+.bg-gray {
+    background-color: #f1f3f5
+}
+
+.bg-white {
+    background-color: #fff
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    background: #526e91;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    border: medium none;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    transition: all .4s ease-out 0s;
+    cursor: pointer
+}
+
+.btn.submit-btn {
+    background: #03b070;
+    color: #FFFFFF;
+    border-radius: 8px;
+}
+
+.btn.submit-btn:hover {
+    background: #048550
+}
+
+table {
+    background-color: #FFFFFF;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse
+}
+
+@media all and (max-width: 767px) {
+    body {
+        margin-top: 105px
+    }
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+a:focus {
+    color: #f58220;
+    text-decoration: none
+}
+
+.section-head {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 0
+}
+
+.product-short-info h1 {
+    font-size: 16px
+}
+
+.product-details .price-wrap {
+    margin-bottom: 12px;
+}
+
+ins {
+    background: #FFFFFF;
+    border-bottom: 5px solid #0089d0;
+    border-top: 5px solid #0089d0;
+    border-left: 5px solid #0089d0;
+    border-right: 5px solid #0089d0;
+    padding: 0.5% 8% 0.5%;
+}
+
+.product-details .price-wrap ins {
+    font-size: 24px;
+    color: #0089d0;
+    font-weight: 600;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.product-details input:focus {
+    outline: 0
+}
+
+.cart-option {
+    padding-top: 25%;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.data-table {
+    width: 100%
+}
+
+.specification-tab .data-table {
+    margin-bottom: 15px
+}
+
+.data-table tr {
+    border-bottom: 1px solid #e1e1e1
+}
+
+.data-table .NAME {
+    padding: 0 30px;
+    width: 25%;
+    background: #eee;
+    text-align: right;
+    color: #464444;
+    font-size: 13px;
+    line-height: 35px;
+    font-weight: 600
+}
+
+.data-table .VALUE {
+    padding: 0 30px;
+    width: 75%;
+    background: #fff;
+    color: #222;
+    font-size: 14px;
+    line-height: 22px
+}
+
+.data-table .product {
+    padding: 0 30px;
+    width: 50%;
+    background: #eee;
+    text-align: center;
+    color: #464444;
+    font-size: 15px;
+    line-height: 35px;
+    font-weight: 400
+}
+
+.data-table .quantity {
+    padding: 0 30px;
+    width: 30%;
+    background: #fff;
+    color: #222;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.data-table .button {
+    padding: 0 20px;
+    width: 100%;
+    background: #c80000;
+    color: #fff;
+    font-size: 16px;
+    line-height: 22px;
+    border: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.data-table .button:hover {
+    background: #0054c9;
+}
+
+.data-table .heading-row {
+    background: #48c774;
+    padding: 10px 30px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600
+}
+
+.main-image {
+    margin: 0 0 5%;
+}
+
+#cartpage {
+    padding: 10% 2%;
+}
