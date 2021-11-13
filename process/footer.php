@@ -6,6 +6,7 @@
 </head>
     <footer id="myFooter">
         <div id="fixedpos">
+            <!--
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
@@ -17,6 +18,7 @@
                         </a>
                     </div>
                 </div>
+-->
             </div>
             <div class="footer-copyright">
                 <p>© Reserved </p>

@@ -10,7 +10,7 @@ else{
     $imagepath = $detail['imagepath'].'500x500.jpg';
 }
 $id = "process/cart_process.php?add=".$_GET['pid'];
-$wid = "process/whishlist_process.php?add=".$_GET['pid'];
+$wid = "process/wishlist_process.php?add=".$_GET['pid'];
 require("process/header.php");
 ?>
 
@@ -80,9 +80,9 @@ require("process/header.php");
 
                         <?php
                             $dsc_q = "SELECT column_name FROM   information_schema.columns WHERE  
-                                    table_schema = 'computer-store' AND table_name = '".$detail['category_name']."'";
+                                    table_schema = 'computer-store' AND table_name = 'product'";
                             $describe = mysqli_query($conn, $dsc_q);
-                            $char_q = "SELECT * FROM ".$detail['category_name']." WHERE product_id=".$_GET['pid'];
+                            $char_q = "SELECT * FROM product as p WHERE product_id=".$_GET['pid'];
                             $char = mysqli_query($conn, $char_q);
                             $char_inf=mysqli_fetch_array($char);
                             $i=0;

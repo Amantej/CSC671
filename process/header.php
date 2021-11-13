@@ -74,7 +74,7 @@ session_start();
                 <div class="navbar-dropdown">
                     <?php
                     require_once 'connect.php';
-                    $size = "SELECT DISTINCT monitor.size FROM  product,monitor where product.product_id=monitor.product_id  ORDER BY monitor.product_id";
+                    $size = "SELECT DISTINCT size FROM  product ORDER BY product_id";
                     $result = mysqli_query($conn, $size);
                     while( $row = mysqli_fetch_array($result)){
                         $size = $row['size'];
@@ -82,7 +82,7 @@ session_start();
                         echo "<a class='navbar-item' href=$size_href>$size</a>";
                     }
                     if(isset($_GET['size'])) {
-                        $GLOBALS['query'] = "SELECT product.* FROM product,monitor where product.product_id=monitor.product_id and monitor.size = '".$_GET['size']."'";
+                        $GLOBALS['query'] = "SELECT * FROM product where product.size = '".$_GET['size']."'";
                     }
                     ?>
                 </div>
@@ -114,7 +114,11 @@ session_start();
                 $item_q = "SELECT sum(quantity) as sum from cart WHERE username = '" . $_SESSION['username'] . "'";
                 $result = mysqli_query($conn, $item_q);
                 $row = mysqli_fetch_array($result);
+                $item_q1 = "SELECT sum(quantity) as sum from wishlist WHERE username = '" . $_SESSION['username'] . "'";
+                $result1 = mysqli_query($conn, $item_q1);
+                $row1 = mysqli_fetch_array($result1);
                 $cartid = "cart.php?cart=".$_SESSION['username'];
+                $wishlistid = "wishlist.php?wishlist=".$_SESSION['username'];
                 echo "
                 <div id='logout' class='buttons'>
                     <a class='button is-link' href=$cartid>
@@ -123,8 +127,15 @@ session_start();
                          echo $row["sum"].')
                          </strong>
                     </a>
-                    <a class="button is-link" href="whishlist.php">
-                        wishlist
+                </div>
+                ';
+                echo "
+                <div class='buttons'>
+                    <a class='button is-link' href=$wishlistid>
+                        <strong>
+                             wishlist(";
+                         echo $row1["sum"].')
+                         </strong>
                     </a>
                     <a class="button is-light" href="process/logout_process.php">
                         Log out
@@ -132,11 +143,15 @@ session_start();
                 </div>
                 ';
             }
-            if (isset($_SESSION['admin'])) {
+            else if (isset($_SESSION['admin'])) {
                 $item_q = "SELECT sum(quantity) as sum from cart WHERE username = '" . $_SESSION['admin'] . "'";
                 $result = mysqli_query($conn, $item_q);
                 $row = mysqli_fetch_array($result);
+                $item_q1 = "SELECT sum(quantity) as sum from wishlist WHERE username = '" . $_SESSION['admin'] . "'";
+                $result1 = mysqli_query($conn, $item_q1);
+                $row1 = mysqli_fetch_array($result1);
                 $cartid = "cart.php?cart=".$_SESSION['admin'];
+                $wishlistid = "wishlist.php?wishlist=".$_SESSION['admin'];
                 echo "
                 <div id='logout' class='buttons'>
                     <a class='button is-link' href=$cartid>
@@ -145,8 +160,15 @@ session_start();
                          echo $row["sum"].')
                          </strong>
                     </a>
-                    <a class="button is-link" href="whishlist.php">
-                        wishlist
+                </div>
+                ';
+                echo "
+                <div id='logout' class='buttons'>
+                    <a class='button is-link' href=$wishlistid>
+                        <strong>
+                            wishlist(";
+                         echo $row1["sum"].')
+                         </strong>
                     </a>
                     <a class="button is-light" href="process/logout_process.php">
                         Log out
