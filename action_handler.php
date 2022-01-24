@@ -1,7 +1,16 @@
 <?php
-    $company=$_POST['company'];
+    $category=$_POST['type'];
     $size=$_POST['size'];
-    $GLOBALS['query']="SELECT * FROM product WHERE company='$company'and size= $size";
+    $weight=$_POST['weight'];
+    $price1=$_POST['Price'];
+    echo $category,$size,$weight,$price1;
+    if($category='ALL'){
+        $GLOBALS['query']="SELECT * FROM product WHERE size= $size and `weight`=$weight and price<=$price1";
+    }
+    else{
+        $GLOBALS['query']="SELECT * FROM product WHERE categoty_id=$category and size= $size and `weight`=$weight and price<=$price1";
+    }
+    
     $db_server = "localhost";
 $db_user = "root";
 $db_pass = "";

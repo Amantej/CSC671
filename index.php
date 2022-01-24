@@ -10,6 +10,6 @@
         <?php require_once("process/card.php"); ?>
     </div>
 </body>
-<?php require_once("process/footer.php"); ?>
+
 
 </html>

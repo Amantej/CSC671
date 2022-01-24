@@ -9,15 +9,15 @@
 <div class="logreg">
     <div class="form">
         <form action="./process/register_process.php" method="post">
-            <input type="text" name="fname" placeholder="First Name" required/>
-            <input type="text" name="lname" placeholder="Last Name" required/>
+            <input type="name" name="fname" placeholder="First Name" required/>
+            <input type="name" name="lname" placeholder="Last Name"  required/>
             <input type="text" name="username" placeholder="Username" required/>
-            <input type="text" name="email" placeholder="Email" required/>
+            <input type="email" name="email" placeholder="Email" required/>
             <input type="password" name="password" placeholder="Password" required/>
-            <input type="number" name="phone" placeholder="Phone" required/>
+            <input type="text" name="phone" placeholder="Phone" name="idNumber" pattern ="[0-9]{10}" required/>
             <input type="text" name="street" placeholder="Street Address" required/>
-            <input type="text" name="city" placeholder="City" required/>
-            <input type="text" name="country" placeholder="Country" required/>
+            <input type="name" name="city" placeholder="City" required/>
+            <input type="name" name="country" placeholder="Country" required/>
             <button>create</button>
             <p class="message">Already registered? &ensp;<a href="./login.php"><strong>Sign In</strong></a></p>
         </form>

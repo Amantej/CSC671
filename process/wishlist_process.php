@@ -15,7 +15,7 @@ if ($count == 0) {
     $wishlist_insert = "INSERT INTO wishlist (username,product_id,quantity) VALUES ('$username',$id,1)";
     $is_inserted = mysqli_query($conn, $wishlist_insert);
     if ($is_inserted) {
-        header("Location: ../index.php");
+        header("Location: ../wishlist.php?wishlist=".$username);
     } else {
         echo "Insert Error";
     }
@@ -24,7 +24,7 @@ else if ($count > 0) {
     $wishlist_insert = "UPDATE wishlist SET quantity = quantity+1 WHERE username ='".$username."' AND product_id ='".$id."'";
     $is_inserted = mysqli_query($conn, $wishlist_insert);
     if ($is_inserted) {
-        header("Location: ../index.php");
+        header("Location: ../wishlist.php?wishlist=".$username);
     } else {
         echo "Update error!";
     }

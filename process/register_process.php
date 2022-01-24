@@ -9,18 +9,16 @@ if (isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['username']
     $lname = $_POST['lname'];
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $password = MD5($_POST['password']);
+    $password = $_POST['password'];
     $phone = $_POST['phone'];
     $street = $_POST['street'];
     $city = $_POST['city'];
     $country = $_POST['country'];
-
-    $register_query = "INSERT INTO user(fname,lname,username,email,password,phone,street,city,country)
-                       VALUES
-                       ('$fname','$lname','$username','$email','$password','$phone','$street','$city','$country')";
+    $passwordmd5=md5($password);
+    $register_query = "INSERT INTO user (fname,lname,username,email,`password`,phone,street,city,country) VALUES ('$fname','$lname','$username','$email','$passwordmd5','$phone','$street','$city','$country')";
 
     $is_inserted = mysqli_query($conn, $register_query);
-
+    echo "'$fname','$lname','$username','$email','$password','$phone','$street','$city','$country'";
     if ($is_inserted) {
         header("Location: ../login.php");
     } else {

@@ -13,8 +13,13 @@
     <link rel="stylesheet" type="text/css" href="css/card.css">
     <title></title>
 </head>
-<?php require("process/header.php");?>
+<?php 
+require("process/header.php");
+?>
 <body>
+
+
+
 <?php
 function get_safe_value($conn,$str){
 	if($str!=''){
@@ -28,11 +33,11 @@ if(isset($_GET['type']) && $_GET['type']!=''){
 		$operation=get_safe_value($conn,$_GET['operation']);
 		$id=get_safe_value($conn,$_GET['id']);
 		if($operation=='active'){
-			$status='1';
+			$status=1;
 		}else{
-			$status='0';
+			$status=0;
 		}
-		$update_status_sql="update product set status='$status' where product_id='$id'";
+		$update_status_sql="update product set stock_status=$status where product_id=$id";
 		mysqli_query($conn,$update_status_sql);
 	}
 	
@@ -64,7 +69,6 @@ $res=mysqli_query($conn,$sql);
 							   <th>ID</th>
 							   <th>Categories</th>
 							   <th>Name</th>
-							   <th>Image</th>
 							   <th>Price</th>
 							   <th>Status</th>
 							   <th></th>
@@ -79,7 +83,6 @@ $res=mysqli_query($conn,$sql);
 							   <td><?php echo $row['product_id']?></td>
 							   <td><?php echo $row['category_name']?></td>
 							   <td><?php echo $row['name']?></td>
-							   <td><img src="<?php echo $row['imagepath']?>"/></td>
 							   <td><?php echo $row['price']?></td>
 							   <td><?php echo $row['stock_status']?></td>
 							   <td>
@@ -89,6 +92,8 @@ $res=mysqli_query($conn,$sql);
 								}else{
 									echo "<span class='badge badge-pending'><a href='?type=status&operation=active&id=".$row['product_id']."'>Deactive</a></span>&nbsp;";
 								}
+
+
 								echo "<span class='badge badge-edit'><a href='manage_product.php?id=".$row['product_id']."'>Edit</a></span>&nbsp;";
 								
 								echo "<span class='badge badge-delete'><a href='?type=delete&id=".$row['product_id']."'>Delete</a></span>";
@@ -96,7 +101,7 @@ $res=mysqli_query($conn,$sql);
 								?>
 							   </td>
 							</tr>
-							<?php } ?>
+							<?php $i++; } ?>
 						 </tbody>
 					  </table>
 				   </div>

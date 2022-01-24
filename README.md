@@ -18,4 +18,6 @@ This repository is deployed in `000webhostapp`\
 Deployed Link : [Click Here](https://computer-store-311.000webhostapp.com/)
 
 ## Authors
-[MD. Mehedi Hasan](https://github.com/mhasan502)
+Aman Tej
+Karthik
+Manideeps

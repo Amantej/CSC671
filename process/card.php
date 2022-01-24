@@ -3,7 +3,7 @@ require_once 'connect.php';
     $result = mysqli_query($conn, $GLOBALS['query']);
     while($row = mysqli_fetch_array($result)){
         $pname = $row['name'];
-        $price = $row['price'];
+        $price = '$'.$row['price'];
         $imagepath = $row['imagepath'].'500x500.jpg';
         $pid = "product.php?pid=".$row['product_id'];
         $add = "process/cart_process.php?add=".$row['product_id'];

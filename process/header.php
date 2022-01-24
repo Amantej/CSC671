@@ -74,7 +74,7 @@ session_start();
                 <div class="navbar-dropdown">
                     <?php
                     require_once 'connect.php';
-                    $size = "SELECT DISTINCT size FROM  product ORDER BY product_id";
+                    $size = "SELECT DISTINCT size FROM  product ORDER BY size";
                     $result = mysqli_query($conn, $size);
                     while( $row = mysqli_fetch_array($result)){
                         $size = $row['size'];
@@ -89,8 +89,8 @@ session_start();
                 
             </div>
             <div id="abcon" class="navbar-item is-hoverable">
-                <a class="navbar-item" href="about us.php">
-                    About Us
+                <a class="navbar-item" href="search1.php">
+                    Multi-Search
                 </a>
                 <a class="navbar-item" href="contact us.php">
                     Contact Us
@@ -121,6 +121,11 @@ session_start();
                 $wishlistid = "wishlist.php?wishlist=".$_SESSION['username'];
                 echo "
                 <div id='logout' class='buttons'>
+                <a class='button is-link' href='order_details.php'>
+                    Orders
+                </a>
+                </div>
+                <div id='logout' class='buttons'>
                     <a class='button is-link' href=$cartid>
                         <strong>
                             <i class='fa fa-shopping-cart'></i> Cart(";
@@ -133,7 +138,7 @@ session_start();
                 <div class='buttons'>
                     <a class='button is-link' href=$wishlistid>
                         <strong>
-                             wishlist(";
+                             Wishlist(";
                          echo $row1["sum"].')
                          </strong>
                     </a>
@@ -154,6 +159,11 @@ session_start();
                 $wishlistid = "wishlist.php?wishlist=".$_SESSION['admin'];
                 echo "
                 <div id='logout' class='buttons'>
+                <a class='button is-link' href='manage_order.php'>
+                    Manage Orders
+                </a>
+                </div>
+                <div id='logout' class='buttons'>
                     <a class='button is-link' href=$cartid>
                         <strong>
                             <i class='fa fa-shopping-cart'></i> Cart(";
@@ -166,7 +176,7 @@ session_start();
                 <div id='logout' class='buttons'>
                     <a class='button is-link' href=$wishlistid>
                         <strong>
-                            wishlist(";
+                            Wishlist(";
                          echo $row1["sum"].')
                          </strong>
                     </a>

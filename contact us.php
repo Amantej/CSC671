@@ -66,7 +66,7 @@
                 <p>View from google map</p>
                 <div id="section-map" class="clearfix">
                     <iframe id="smallmap"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1562.0932074899956!2d90.42441691536628!3d23.8148109545373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c64c103a8093%3A0xd660a4f50365294a!2sNorth%20South%20University!5e1!3m2!1sen!2sbd!4v1586688203691!5m2!1sen!2sbd">
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3225.007154476118!2d-79.81238628479835!3d36.06892958010565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88531915516dc097%3A0xa41b775ab1359ba7!2sUniversity%20of%20North%20Carolina%20Greensboro!5e0!3m2!1sen!2sus!4v1636945886603!5m2!1sen!2sus" width="600" height="450" style="border:0;" >
                     </iframe>
                 </div>
             </div>

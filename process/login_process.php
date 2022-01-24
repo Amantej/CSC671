@@ -3,7 +3,12 @@ require_once 'connect.php';
 
 if(isset($_POST['username']) && isset($_POST['password'])) {
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    if($username=='admin'){
+        $password=$_POST['password'];
+    }
+    else{
+    $password = md5($_POST['password']);
+    }
     $login_query = "SELECT concat(fname,' ',lname) as name FROM `user` Where username='$username' AND password='$password'";
     $admin= "SELECT username FROM `admin_users` Where username='$username' AND password='$password'";
 
@@ -19,11 +24,13 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
     if ($count == 1 && $count1 != 1) {
         session_start();
         $_SESSION['username'] = $username;
+        $_SESSION['login'] = 1;
         header("Location: ../index.php");
     } 
-    if ($count1 == 1) {
+    else if ($count1 == 1) {
         session_start();
         $_SESSION['admin'] = $username;
+        $_SESSION['login'] = 1;
         header("Location: ../category.php");
     } 
     
