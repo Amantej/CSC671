@@ -1,11 +1,11 @@
 # Computer-Store
-CSE311 Database Management System Project
+CSE671 Database Management System Project
 
 ## Installation
-*Install Xampp if it wasn't installed*
+*Install Xampp/wamp if it wasn't installed*
 * Extract source files first
-* Put extracted files in  `[Xampp directory]/htdocs/`
-* Open `Xampp control panel` and start  `Apache` and `MySQL`
+* Put extracted files in  `[Xampp directory]/htdocs/` or www/computer-store
+* Open `Xampp control panel` and start  `Apache` and `MySQL` or run wamp
 * Open Browser and type `localhost/computer-store`
 
 
